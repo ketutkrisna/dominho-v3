@@ -234,7 +234,21 @@ $(function(){
 		15,15,15,15
 	];
 
-	console.log(dataimages.length)
+	function cetakmini(jumlah){
+		if(jumlah<1000000){
+			$('.mychip').text(rubah(jumlah));
+		}else if(jumlah>=1000000&&jumlah<1000000000){
+			var m = jumlah/1000000;
+			$('.mychip').text(rubah(m)+'M');
+		}else if(jumlah>=1000000000&&jumlah<1000000000000){
+			var m = jumlah/1000000000;
+			$('.mychip').text(rubah(Math.floor(m))+'B');
+		}else{
+			var m = jumlah/1000000000000;
+			$('.mychip').text(rubah(Math.floor(m))+'T');
+		}
+	}
+
 
 	var spinawalstop=document.getElementById('spinawal');
 	var btnstop=document.getElementById('btnstop');
@@ -273,7 +287,7 @@ $(function(){
 		localStorage.setItem('mychip',0);
 		tunggus();
 	}
-	$('.mychip').text(rubah(localStorage.getItem("mychip")));
+	$('.mychip').text(cetakmini(localStorage.getItem("mychip")));
 
 	if(Number(localStorage.getItem("mychip"))<100000){
 		$('.bonus2m').show();
@@ -310,7 +324,7 @@ $(function(){
 		starts();
 		$('.bonus2m').hide();
 		$('.changebet').removeAttr('disabled');
-		$('.mychip').text(rubah(localStorage.getItem("mychip")));
+		$('.mychip').text(cetakmini(localStorage.getItem("mychip")));
 	});
 
 	var intervalspin=0;
@@ -367,7 +381,7 @@ $(function(){
 				$('#tungguspin').html('STOP <sup><span style="font-size:16px;color:lightblue;position:absolute;right:-13px;top:0;">&#8734;</span></sup>');
 				$('#stopspin').html('STOP <sup><span style="font-size:16px;color:lightblue;position:absolute;right:-13px;top:0;">&#8734;</span></sup>');
 			}
-		}, 3200);
+		}, 3600);
 		intervalspin = setInterval(function(){
 			$('#startspin').click();
 			spincount--;
@@ -387,9 +401,9 @@ $(function(){
 				var timeoutstop = setTimeout(function() {
 					starts();
 					$('.disablebtn').removeAttr('disabled');
-				}, 3000);
+				}, 3400);
 			}
-		}, 3200)
+		}, 3600)
 	}
 
 	$('.spinotomatis').on('click',function(){
@@ -579,7 +593,7 @@ $(function(){
 		if(rand11 == rand22 && rand11 == rand33 && rand11 == rand44 && rand11 == rand55){
 			updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			tunggus();
 			item3 = setTimeout(function() {
 				$('#csfff')[0].play();
@@ -619,7 +633,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -673,7 +687,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -726,7 +740,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -793,7 +807,7 @@ $(function(){
 		}else if(rand11 == rand22 && rand11 == rand33 && rand11 == rand44){
 			updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			tunggus();
 			item2 = setTimeout(function() {
 				$('#csfff')[0].play();
@@ -842,7 +856,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -904,7 +918,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -966,7 +980,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -1043,7 +1057,7 @@ $(function(){
 		}else if(rand11 == rand22 && rand11 == rand33){
 			updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			tunggus();
 			item4 = setTimeout(function() {
 				$('#csfff')[0].play();
@@ -1083,7 +1097,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -1137,7 +1151,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -1191,7 +1205,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					if((spincount-1)>0 && otomatis == true){
@@ -1260,7 +1274,7 @@ $(function(){
 		}else{
 			updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			tunggus();
 			item1 =	setTimeout(function() {
 				if(Number(updatechip)<100000){
@@ -1357,7 +1371,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1409,7 +1423,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1461,7 +1475,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1527,7 +1541,7 @@ $(function(){
 		}else if(rand11 == rand22 && rand11 == rand33 && rand11 == rand44){
 			// updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			// localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			// item2 = setTimeout(function() {
 				$('#csfff')[0].play();
 				csfff.currentTime = 0;
@@ -1576,7 +1590,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1636,7 +1650,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1696,7 +1710,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1771,7 +1785,7 @@ $(function(){
 		}else if(rand11 == rand22 && rand11 == rand33){
 			// updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			// localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			// item2 = setTimeout(function() {
 				$('#csfff')[0].play();
 				csfff.currentTime = 0;
@@ -1811,7 +1825,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1863,7 +1877,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1915,7 +1929,7 @@ $(function(){
 					}
 					tunggus();
 					setTimeout(function() {
-						$('.mychip').text(rubah(localStorage.getItem('mychip')));
+						$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 		           		$('.takebonus').text(rubah(betkaliitem));
 					}, 10500);
 					// if((spincount-1)>0 && otomatis == true){
@@ -1982,7 +1996,7 @@ $(function(){
 		}else{
 			// updatechip = Number(localStorage.getItem('mychip'))-Number(bet);
 			// localStorage.setItem('mychip',updatechip);
-			$('.mychip').text(rubah(localStorage.getItem('mychip')));
+			$('.mychip').text(cetakmini(localStorage.getItem('mychip')));
 			// item1 =	setTimeout(function() {
 				if(Number(updatechip)<100000){
 					clearInterval(intervalspin);
