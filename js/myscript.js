@@ -302,12 +302,35 @@ $(function(){
 		$('#starts').hide();
 	}
 
+
+	$('.fafafaopen').on('click',function(){
+		$('.displayawal').hide();
+		$('.slotfafafa').fadeIn();
+		room();
+	})
+	$('.exitfafafa').on('click',function(){
+		$('.slot:nth-child(1) .value').css('background-color','#04e0dd');
+		$('.slot:nth-child(2) .value').css('background-color','#04e0dd');
+		$('.slot:nth-child(3) .value').css('background-color','#04e0dd');
+		$('.slot:nth-child(4) .value').css('background-color','#04e0dd');
+		$('.slot:nth-child(5) .value').css('background-color','#04e0dd');
+		$('.gelap').css('opacity','0')
+		$('.chipawal').text(nFormatter(localStorage.getItem("mychip"),3));
+		$('.displayawal').fadeIn();
+		$('.slotfafafa').hide();
+	})
+	// $('.falseexit').on('click',function(){
+	// 	$('.falseexit').after('Stop spin untuk keluar')
+	// })
+
+
 	if(localStorage.getItem('mychip')){
 
 	}else{
 		localStorage.setItem('mychip',0);
 		tunggus();
 	}
+	$('.chipawal').text(nFormatter(localStorage.getItem("mychip"),3));
 	$('.mychip').text(rubah(localStorage.getItem("mychip")));
 
 	if(Number(localStorage.getItem("mychip"))<100000){
@@ -456,8 +479,17 @@ $(function(){
    	var rand44,rand55;
    	var animatecek2,animatecek3,animatecek4;
 
+   	function hideexit(){
+		$('.falseexit').show();
+		$('.exitfafafa').hide();
+   	}
+   	function showexit(){
+		$('.falseexit').hide();
+		$('.exitfafafa').show();
+   	}
 
 	$('#startspin').on('click',function(){
+		hideexit();
 		$('.gelap').hide();
 		// console.log(spincount-2);
 		$('#tungguspin').text('STOP');
@@ -665,6 +697,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -719,6 +752,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -772,6 +806,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -821,6 +856,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 				}
@@ -889,6 +925,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -951,6 +988,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -1013,6 +1051,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -1071,6 +1110,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 2200);
 					}
 				}
@@ -1130,6 +1170,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -1184,6 +1225,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -1238,6 +1280,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 11200);
 					}
 					setTimeout(function() {
@@ -1288,6 +1331,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 2200);
 					}
 				}
@@ -1314,6 +1358,7 @@ $(function(){
 					}else{
 						stop2 = setTimeout(function() {
 							starts();
+							showexit();
 						}, 200);
 					}
 				}
@@ -1417,6 +1462,7 @@ $(function(){
 						bigwin.currentTime = 0;
 						$('#bigwin')[0].pause();
 						starts();
+						showexit();
 						$('.jakpot').text('');
 						$('.popupbox').fadeOut();
 				        $('.disablebtn').removeAttr('disabled');
@@ -1469,6 +1515,7 @@ $(function(){
 						megawin.currentTime = 0;
 						$('#megawin')[0].pause();
 						starts();
+						showexit();
 						$('.jakpot').text('');
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
@@ -1521,6 +1568,7 @@ $(function(){
 						superwin.currentTime = 0;
 						$('#superwin')[0].pause();
 						starts();
+						showexit();
 						$('.jakpot').text('');
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
@@ -1554,6 +1602,7 @@ $(function(){
 					// }
 					setTimeout(function() {
 						starts();
+						showexit();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
 					}, 2000);
@@ -1635,6 +1684,7 @@ $(function(){
 						bigwin.currentTime = 0;
 						$('#bigwin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -1695,6 +1745,7 @@ $(function(){
 						megawin.currentTime = 0;
 						$('#megawin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -1755,6 +1806,7 @@ $(function(){
 						superwin.currentTime = 0;
 						$('#superwin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -1798,6 +1850,7 @@ $(function(){
 					// }
 					setTimeout(function() {
 						starts();
+						showexit();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
 					}, 2000);
@@ -1870,6 +1923,7 @@ $(function(){
 						bigwin.currentTime = 0;
 						$('#bigwin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -1922,6 +1976,7 @@ $(function(){
 						megawin.currentTime = 0;
 						$('#megawin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -1974,6 +2029,7 @@ $(function(){
 						superwin.currentTime = 0;
 						$('#superwin')[0].pause();
 						starts();
+						showexit();
 						$('.popupbox').fadeOut();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
@@ -2009,6 +2065,7 @@ $(function(){
 					// }
 					setTimeout(function() {
 						starts();
+						showexit();
 						$('.disablebtn').removeAttr('disabled');
 				        $('.changebet').removeAttr('disabled');
 					}, 2000);
@@ -2036,6 +2093,7 @@ $(function(){
 						tunggus();
 						setTimeout(function() {
 							starts();
+							showexit();
 							$('.disablebtn').removeAttr('disabled');
 				        	$('.changebet').removeAttr('disabled');
 						}, 900);
