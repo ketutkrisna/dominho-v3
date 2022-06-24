@@ -43,11 +43,34 @@ body{
     border-radius:10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.4) 0px -39px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+.bungkuskali{
+    display:flex;
+    justify-content:center;
+    z-index: -20;
+}
+.displaykali{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#04e0dd;
+    border-radius:50px 50px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px 13px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px 10px 30px 0px inset, rgba(0, 0, 0, 0.4) 0px 5px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding:2px;
+    /*margin-bottom:-20px;*/
+    width:90%;
+}
 .slot{
     background-color:#04e0dd;
     border-radius:7px;
     /*box-shadow:3px 3px 5px rgba(0,0,0,.4);*/
     margin:1px;
+}
+.slotkali{
+    background-color:orange;
+    border-radius:10px;
+    /*box-shadow:3px 3px 5px rgba(0,0,0,.4);*/
+    border:4px solid #fff;
+    margin:2px;
 }
 .value{
     display:flex;
@@ -62,6 +85,19 @@ body{
     box-shadow:inset 3px 3px 5px rgba(0,0,0,.6);
     border-radius:7px;
 }
+.valuekali{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    width:65px;
+    height:40px;
+    /*border:2px solid #ddd;*/
+    overflow:hidden;
+    z-index:1;
+    box-shadow:inset 3px 3px 5px rgba(0,0,0,.6);
+    border-radius:7px;
+}
 .gelap::after{
     content: '';
     margin-top:-65px;
@@ -69,7 +105,7 @@ body{
     width:65px;
     height: 65px;
     background-color:rgba(0,0,0,.5);
-    z-index:9999;
+    z-index:9;
     border-radius:7px;
 }
 .slot .value div{
@@ -81,19 +117,50 @@ body{
     flex-wrap:wrap;
     font-weight:bold;
     border-radius:5px;
+}
+.slotkali .valuekali div{
+    width:65px;
+    height: 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    font-size:25px;
+    border-radius:5px;
     z-index:2;
+    font-family: 'Titan One', cursive;
 }
 .slot .value div img{
     transform:scale(.99);
     /*padding:5px;*/
 }
+.slotkali .valuekali div img{
+    transform:scale(.99);
+    /*padding:5px;*/
+}
+.valuekali div{
+    text-shadow:2px 2px 4px rgba(0,0,0,.1);
+    color: #414141;
+}
 .sama{
     transform:rotate(30deg);
 }
 .spingo{
-    animation: spin .5s linear;
+    animation: spin .6s linear;
 }
 @keyframes spin{
+    0%{
+        transform: translateY(-40rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+.spinkali{
+    animation: spinx 1.5s linear;
+}
+@keyframes spinx{
     0%{
         transform: translateY(-40rem);
     }

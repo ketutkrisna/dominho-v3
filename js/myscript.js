@@ -10,6 +10,50 @@ function michat(data){
 	return rubah(datas);
 }
 
+// var benar;
+// function compare(arr1) {
+//   // arr1.forEach(function(item){
+//   	benar=[];
+//   	if(arr1[0]==arr1[1]&&arr1[0]==arr1[2]&&arr1[0]==arr1[3]&&arr1[0]==arr1[4]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[0]==arr1[1]&&arr1[0]==arr1[7]&&arr1[0]==arr1[3]&&arr1[0]==arr1[4]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[0]==arr1[6]&&arr1[0]==arr1[12]&&arr1[0]==arr1[8]&&arr1[0]==arr1[4]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[5]==arr1[1]&&arr1[5]==arr1[2]&&arr1[5]==arr1[3]&&arr1[5]==arr1[9]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[5]==arr1[6]&&arr1[5]==arr1[7]&&arr1[5]==arr1[8]&&arr1[5]==arr1[9]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[5]==arr1[11]&&arr1[5]==arr1[12]&&arr1[5]==arr1[13]&&arr1[5]==arr1[9]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[10]==arr1[11]&&arr1[10]==arr1[12]&&arr1[10]==arr1[13]&&arr1[10]==arr1[14]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[10]==arr1[11]&&arr1[10]==arr1[7]&&arr1[10]==arr1[13]&&arr1[10]==arr1[14]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}else if(arr1[10]==arr1[6]&&arr1[10]==arr1[2]&&arr1[10]==arr1[8]&&arr1[10]==arr1[14]){
+//   		// return 'benar';
+//   		benar.push(1);
+//   	}
+//   	return benar;
+//   // })
+// }
+// // var items = [
+// //   [0,   1,   2,   3,   4],
+// //   [5,   6,   7,   8,   9],
+// //   [10,  11,  12,  13,  14]
+// // ];
+// data1=[1,1,1,1,1,1,1,1,1,1,11,12,13,14,15];
+// console.log(compare(data1));
+// // exit();
+
 
 
 
@@ -63,13 +107,7 @@ $(function(){
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="1" src="img/item/koin.png">',
 
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="3" src="img/item/petasan.png">',
@@ -131,8 +169,8 @@ $(function(){
 	];
 
 	var dataperkalian= [
-		1,1,1,1,1, 1,1,1,1,1, 1,1,1,1,1,
-		3,3,3,3,3, 3,3,3,3,3, 3,3,3,3,3,
+		1,1,1,1,1, 1,1,1,1,1, 1,1,
+		3,3,3,3,3, 3,3,3,3,3, 3,3,
 		5,5,5,5,5, 5,5,5,5,5,
 		7,7,7,7,7, 7,7,7,7,7,
 		9,9,9,9,9, 9,
@@ -169,12 +207,6 @@ $(function(){
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="5" src="img/item/liontin.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="5" src="img/item/liontin.png">',
 
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
-		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
 		'<img class="ambiltambahchip" width="100%" height="100%" data-tambahchip="0" src="img/item/wild.png">',
@@ -226,12 +258,27 @@ $(function(){
 		1,1,1,1,1, 1,1,1,
 		3,3,3,3,3, 3,3,3,
 		5,5,5,5,5, 5,5,5,
-		0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
+		0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,
 		7,7,7,7,7, 7,
 		9,9,9,9,9, 9,
 		11,11,11,11,11, 11,
 		13,13,13,13,
 		15,15,15,15
+	];
+
+	var dataimagekali=[
+		1,1,1,1,1, 2,1,1,2,1,
+		3,1,2,1,1, 4,1,1,1,1,
+		5,1,1,1,1, 1,1,4,1,1,
+		1,1,3,1,1, 1,1,1,1,1,
+		1,1,1,1,1, 10,1,1,1,1,
+		1,1,1,1,1, 1,1,1,1,1,
+		1,1,2,1,1, 1,1,1,30,1,
+		1,1,25,1,1, 1,1,1,1,1,
+		1,1,1,1,1, 1,1,2,1,1,
+		15,1,3,1,1, 1,1,4,1,1,
+		1,1,1,1,1, 1,1,1,3,1,
+		1,1,1,1,1, 20,1,1,1,1
 	];
 
 	function cetakmini(jumlah){
@@ -455,12 +502,24 @@ $(function(){
 	});
 
 
+	var rand11;
+   	var rand22;
+   	var rand33;
+   	var rand44,rand55;
+   	var animatecek2,animatecek3,animatecek4;
+   	var randkali;
+
+
 	function room(){
-		rand1=Math.floor(Math.random()*70);
-		rand2=Math.floor(Math.random()*70);
-		rand3=Math.floor(Math.random()*70);
-		rand4=Math.floor(Math.random()*70);
-		rand5=Math.floor(Math.random()*70);
+		rand1=Math.floor(Math.random()*64);
+		rand2=Math.floor(Math.random()*64);
+		rand3=Math.floor(Math.random()*64);
+		rand4=Math.floor(Math.random()*64);
+		rand5=Math.floor(Math.random()*64);
+
+		randkali=Math.floor(Math.random()*120);
+		$('.slotkali:nth-child(1) .valuekali .perkalian').text('x'+dataimagekali[randkali]);
+
 		$('.slot:nth-child(1) .value div').removeClass('spingo'); 
         $('.slot:nth-child(1) .value .hasil1').html(dataimages[rand1]);
         $('.slot:nth-child(2) .value div').removeClass('spingo'); 
@@ -473,11 +532,6 @@ $(function(){
        	$('.slot:nth-child(5) .value .hasil5').html(dataimages[rand5]);
 	}
 	room();
-	var rand11;
-   	var rand22;
-   	var rand33;
-   	var rand44,rand55;
-   	var animatecek2,animatecek3,animatecek4;
 
    	function hideexit(){
 		$('.falseexit').show();
@@ -494,12 +548,13 @@ $(function(){
 		// console.log(spincount-2);
 		$('#tungguspin').text('STOP');
 		$('.takebonus').text('Semoga Beruntung');
-		rand1=Math.floor(Math.random()*70);
-		rand2=Math.floor(Math.random()*70);
-		rand3=Math.floor(Math.random()*70);
+		rand1=Math.floor(Math.random()*64);
+		rand2=Math.floor(Math.random()*64);
+		rand3=Math.floor(Math.random()*64);
+		rand4=Math.floor(Math.random()*64);
+		rand5=Math.floor(Math.random()*64);
 
-		rand4=Math.floor(Math.random()*70);
-		rand5=Math.floor(Math.random()*70);
+		randkali=Math.floor(Math.random()*120);
 
        	rand11 = dataperkalian[rand1];
        	rand22 = dataperkalianwild[rand2];
@@ -587,6 +642,11 @@ $(function(){
 				'animation-play-state':'running',
 	            'animation-iteration-count':'100'
 	        });
+	        $('.valuekali div').addClass('spinkali');
+			$('.valuekali div').css({
+				'animation-play-state':'running',
+	            'animation-iteration-count':'100'
+	        });
         }, 200);
 
 		spinkolom1 = setTimeout(function() {
@@ -624,6 +684,8 @@ $(function(){
             reelstop.currentTime = 0;
            	$('.slot:nth-child(5) .value div').removeClass('spingo'); 
            	$('.slot:nth-child(5) .value .hasil5').html(dataimages[rand5]);
+           	$('.slotkali:nth-child(1) .valuekali div').removeClass('spinkali'); 
+           	$('.slotkali:nth-child(1) .valuekali .perkalian').text('x'+dataimagekali[randkali]);
            	if((spincount-1)>0){
            		$('.changebet').attr('disabled','on');
            	}else{
@@ -660,7 +722,7 @@ $(function(){
 	           	animatecek2=$('.hasil2 img').data('tambahchip');
 	           	animatecek3=$('.hasil3 img').data('tambahchip');
 	           	animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*20*Number(tambahchip);
+	           	betkaliitem = Number(bet)*20*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 
@@ -877,7 +939,7 @@ $(function(){
 	           	animatecek2=$('.hasil2 img').data('tambahchip');
 	           	animatecek3=$('.hasil3 img').data('tambahchip');
 	           	animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*3*Number(tambahchip);
+	           	betkaliitem = Number(bet)*3*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 
@@ -1130,7 +1192,7 @@ $(function(){
 				var animatecek2=$('.hasil2 img').data('tambahchip');
 	           	var animatecek3=$('.hasil3 img').data('tambahchip');
 	           	var animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*Number(tambahchip);
+	           	betkaliitem = Number(bet)*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 
@@ -1391,6 +1453,7 @@ $(function(){
         clearTimeout(stop1);
         clearTimeout(stop2);
         $('.value div').removeClass('spingo');
+        $('.valuekali div').removeClass('spinkali');
 
         
         setTimeout(function() {
@@ -1410,7 +1473,7 @@ $(function(){
 	           	animatecek2=$('.hasil2 img').data('tambahchip');
 	           	animatecek3=$('.hasil3 img').data('tambahchip');
 	           	animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*20*Number(tambahchip);
+	           	betkaliitem = Number(bet)*20*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 				tunggus();
@@ -1623,7 +1686,7 @@ $(function(){
 	           	animatecek2=$('.hasil2 img').data('tambahchip');
 	           	animatecek3=$('.hasil3 img').data('tambahchip');
 	           	animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*3*Number(tambahchip);
+	           	betkaliitem = Number(bet)*3*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 				tunggus();
@@ -1870,7 +1933,7 @@ $(function(){
 	           	animatecek2=$('.hasil2 img').data('tambahchip');
 	           	animatecek3=$('.hasil3 img').data('tambahchip');
 	           	animatecek4=$('.hasil4 img').data('tambahchip');
-	           	betkaliitem = Number(bet)*Number(tambahchip);
+	           	betkaliitem = Number(bet)*Number(tambahchip)*Number(dataimagekali[randkali]);
 	           	updatechips = Number(localStorage.getItem('mychip'))+Number(betkaliitem);
 				localStorage.setItem('mychip',updatechips);
 				tunggus();
@@ -2113,6 +2176,8 @@ $(function(){
         $('.slot:nth-child(4) .value .hasil4').html(dataimageswild[rand4]);
         $('.slot:nth-child(5) .value div').removeClass('spingo'); 
         $('.slot:nth-child(5) .value .hasil5').html(dataimages[rand5]);
+        $('.slotkali:nth-child(1) .valuekali .perkalian').removeClass('spinkali');
+        $('.slotkali:nth-child(1) .valuekali .perkalian').text('x'+dataimagekali[randkali]);
 	});
 
 
