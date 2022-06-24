@@ -212,6 +212,13 @@
   
   <body>
 
+    <div class="awalloading" style="width:90%;position:absolute;right:0;left:0;margin:auto;display:none;">
+      <h3 style="text-align:center;">Loading Ngeslot</h3>
+      <div class="progress fw-bold" style="height: 30px;border-radius:15px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0%" aria-valuemax="100">0</div>
+      </div>
+    </div>
+
     <div class="body">
 
     <div class="displayawal">
@@ -468,6 +475,12 @@
     </audio>
     <audio id="midwin">
       <source src="audio/fafafa/midwin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgsound" loop>
+      <source src="audio/bgsound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loading">
+      <source src="audio/loading.mp3" type="audio/mpeg">
     </audio>
     <!-- tutup musik -->
 
