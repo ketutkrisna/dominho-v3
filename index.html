@@ -186,6 +186,9 @@
         font-weight: bold;
         padding:5px 10px 5px 10px;
       }
+      .musikset, .exitfafafa, .falseexit{
+        box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 6px 0px inset, rgba(0, 0, 0, 0.5) 0px -1px 6px 0px inset, rgba(0, 0, 0, 0.3) 0px -2px 5px 0px inset, rgba(0, 0, 0, 0.6) 0px 0px 3px, rgba(0, 0, 0, 0.6) 0px 4px 2px, rgba(0, 0, 0, 0.1) 0px 3px 2px, rgba(0, 0, 0, 0.1) 0px 3px 2px, rgba(0, 0, 0, 0.1) 0px 3px 2px;
+      }
       /*.bounce2 {
         animation: bounce2 2s ease;
       }
@@ -214,7 +217,7 @@
 
     <div class="awalloading" style="width:90%;position:absolute;right:0;left:0;margin:auto;display:none;">
       <h3 style="text-align:center;">Loading Ngeslot</h3>
-      <div class="progress fw-bold" style="height: 30px;border-radius:15px;">
+      <div class="progress fw-bold" style="height: 20px;border-radius:10px;">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0%" aria-valuemax="100">0</div>
       </div>
     </div>
@@ -235,8 +238,10 @@
     <div class="row slotfafafa" style="display: none;">
       <div class="col-12">
 
-        <div class="exitfafafa" style="position: absolute;top:5px;right:10px;"><i class="bi bi-box-arrow-left fs-1 text-danger fw-bold" style="text-shadow:2px 2px 4px rgba(0,0,0,.6)"></i></div>
-        <div class="falseexit" style="position: absolute;top:5px;right:10px;display:none;"><i class="bi bi-box-arrow-left fs-1 text-secondary fw-bold" style="text-shadow:2px 2px 4px rgba(0,0,0,.6)"></i></div>
+        <div class="exitfafafa text-center bg-danger" style="position:absolute;top:10px;right:10px;height:40px;width:42px;border-radius:5px;background-color:#eee;font-size:26px;line-height:40px;"><i class="bi bi-box-arrow-left text-white fw-bold"></i></div>
+        <div class="falseexit text-center bg-secondary" style="position: absolute;top:10px;right:10px;height:40px;width:42px;border-radius:5px;background-color:#eee;display:none;font-size:26px;line-height:40px;"><i class="bi bi-box-arrow-left text-white fw-bold"></i></div>
+
+        <div class="musikset text-center" style="position: absolute;top:60px;right:10px;height:40px;width:42px;border-radius:50%;background-color:#eee;font-size:26px;line-height:40px;"><i class="bi bi-volume-up-fill text-primary fw-bold"></i></div>
 
         <div class="row">
           <div class="col-12 d-flex justify-content-between align-items-center mb-4">

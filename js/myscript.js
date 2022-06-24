@@ -369,6 +369,17 @@ $(function(){
 		$('#starts').hide();
 	}
 
+	$('.musikset').on('click',function(){
+      var audio = $("#bgsound")[0];
+      if (audio.paused) {
+          audio.play();
+          $('.musikset').html('<i class="bi bi-volume-up-fill text-success fw-bold fs-1"></i>')
+      }  else {
+          audio.pause();
+          $('.musikset').html('<i class="bi bi-volume-mute-fill text-secondary fw-bold fs-1"></i>')
+      }
+    });
+
 	bgsound.volume=0.4;
 	$('.fafafaopen').on('click',function(){
 		$('.displayawal').hide();
